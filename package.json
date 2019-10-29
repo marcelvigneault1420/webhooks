@@ -1,0 +1,26 @@
+{
+  "name": "webhooks",
+  "version": "1.0.0",
+  "description": "Webhooks",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "nodejs",
+    "node",
+    "server",
+    "webhook",
+    "webhooks",
+    "github",
+    "cdci",
+    "deploy"
+  ],
+  "author": "Marcel Vigneault",
+  "license": "MIT",
+  "dependencies": {
+    "body-parser": "^1.19.0",
+    "child_process": "^1.0.2",
+    "express": "^4.17.1"
+  }
+}
