@@ -26,7 +26,7 @@ app.post("/github", (req, res, next) => {
 });
 
 function deploy(repoName, res) {
-	var currString = `/var/apps/charlesvigneault/webhooks/deploys/${repoName}.sh`;
+	var currString = `/var/apps/charlesvigneault/webhooks/scripts/restart-server.sh ${repoName}`;
 	console.log(`Restarting ${repoName} with file ${currString}`);
 
 	childProcess.exec(currString, function(err, stdout, stderr){
