@@ -12,10 +12,14 @@ app.post("/github", (req, res, next) => {
 		var branch = req.body.ref;
 		var repo = req.body.repository.name;
 
-		console.log(`Push on branch ${repo}/${branch.substring(branch.length - 6)} by ${sender.login}`);
+		if (branch !== undefined && branch.length >= 6) {
+			console.log(`Push on branch ${repo}/${branch.substring(branch.length - 6)} by ${sender.login}`);
 
-		if(branch.substring(branch.length - 6) === 'master') {
-			deploy(repo, res);
+			if(branch.substring(branch.length - 6) === 'master') {
+				deploy(repo, res);
+			} else {
+				return res.sendStatus(200);
+			}
 		} else {
 			return res.sendStatus(200);
 		}
