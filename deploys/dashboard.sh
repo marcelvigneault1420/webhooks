@@ -1,6 +1,6 @@
-cd /var/apps/charlesvigneault/express-api-my-dashboard
+cd /var/apps/charlesvigneault/dashboard
 
-echo "Pulling from express-api-my-dashboard/master."
+echo "Pulling from dashboard/master."
 
 git pull origin master
 
